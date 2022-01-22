@@ -16,6 +16,7 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import include, path
 
+# the include() chops off whatever part of the url is matched to that point, and sends to the polls for processing
 urlpatterns = [
     path('polls/', include('polls.urls')),
     path('admin/', admin.site.urls),
